@@ -1,0 +1,91 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>My Doggos</ion-title>
+  </ion-navbar>
+  <ion-toolbar no-border-top>
+    <ion-searchbar placeholder="Filter Items" (ionInput)="filterDoggs($event)"></ion-searchbar>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-row>
+      
+  </ion-row>
+    <ion-list class="my-doggos__list">
+        <ion-item-sliding *ngFor="let doggo of doggos"><!--(click)="openDoggoCard(doggo.id)"-->
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="{{doggo.documents.image}}">
+            </ion-avatar>
+            <h2>Doggo1<!--doggo.name--></h2>
+          </ion-item>
+          <ion-item-options side="left">
+            <button ion-button color="secondary"><!--(click)="markDoggo(doggo.id)"-->
+              <ion-icon name="checkmark"></ion-icon>
+              Mark
+            </button>
+          </ion-item-options>
+          <ion-item-options side="right">
+            <button ion-button color="danger"><!--(click)="deleteDoggo(doggo.id)"-->
+              <ion-icon name="trash"></ion-icon>
+              Delete
+            </button>
+          </ion-item-options>
+        </ion-item-sliding>
+
+        <ion-item-sliding>
+            <ion-item>
+              <ion-avatar item-start>
+                <img src="../../assets/imgs/dog2.jpg">
+              </ion-avatar>
+              <h2>Doggo2</h2>
+            </ion-item>
+            <ion-item-options side="left">
+              <button ion-button color="primary">
+                <ion-icon name="text"></ion-icon>
+                Text
+              </button>
+              <button ion-button color="secondary">
+                <ion-icon name="call"></ion-icon>
+                Call
+              </button>
+            </ion-item-options>
+            <ion-item-options side="right">
+              <button ion-button color="primary">
+                <ion-icon name="mail"></ion-icon>
+                Email
+              </button>
+            </ion-item-options>
+          </ion-item-sliding>
+
+          <ion-item-sliding>
+              <ion-item>
+                <ion-avatar item-start>
+                  <img src="../../assets/imgs/dog3.jpeg">
+                </ion-avatar>
+                <h2>Slimer</h2>
+              </ion-item>
+              <ion-item-options side="left">
+                <button ion-button color="primary">
+                  <ion-icon name="text"></ion-icon>
+                  Text
+                </button>
+                <button ion-button color="secondary">
+                  <ion-icon name="call"></ion-icon>
+                  Call
+                </button>
+              </ion-item-options>
+              <ion-item-options side="right">
+                <button ion-button color="primary">
+                  <ion-icon name="mail"></ion-icon>
+                  Email
+                </button>
+              </ion-item-options>
+            </ion-item-sliding>
+      </ion-list>
+
+</ion-content>

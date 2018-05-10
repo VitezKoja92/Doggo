@@ -1,3 +1,35 @@
 page-dashboard {
 
+    // disable scrolling
+    .scroll-content {
+        overflow: hidden;
+    }
+
+    .dashboard {
+        background-color: color($colors, neutral);
+
+        &__intro {
+            color: color($colors, carbon);
+            font-size: $fs-20;
+            font-weight: 600;
+            width: 100%;
+            justify-content: center;
+        }
+
+
+        &__male-stats-icon {
+            color: $color-male;
+            font-weight: 600;
+        }
+        &__female-stats-icon {
+            color: $color-female;
+            font-weight: 600;
+        }
+
+        // &__overview-card ion-item {
+        //     background-color: color($colors, carbon);
+        // }
+    }
+
+
 }

@@ -1,0 +1,28 @@
+page-footer-tab {
+
+    // make tabs visible
+    .tabbar{ opacity: 1; }
+
+
+    .tab-button {
+        padding-bottom: 10px;
+    }
+
+    .footer-tab {
+        &__tabs {
+            color: blue;
+            padding-bottom: 10px;
+        }
+        &__tab {
+            background-color: red;
+            padding-bottom: 10px;
+        }
+    }
+
+    ion-tab {
+        background-color: red;
+        padding-bottom: 10px;
+    }
+
+    
+}
