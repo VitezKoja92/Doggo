@@ -1,3 +1,31 @@
 page-my-doggos {
+    .my-doggos {
+        &__navbar-buttons-left {
+            order: 2;
 
+            button {
+                margin-left: 5px;
+            }
+        }
+
+        &__navbar-buttons-right {
+            button {
+                margin-right: 5px;
+            }
+        }
+
+        &__toolbar {
+            display: flex;
+        }
+
+        &__toolbar-buttons{
+            display: inline-block;
+        }
+
+        &__toolbar-filters {
+            ion-item {
+                display: inline-block;
+            }
+        }
+    }
 }

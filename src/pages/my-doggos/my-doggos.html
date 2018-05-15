@@ -1,91 +1,103 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>My Doggos</ion-title>
+
+    <ion-buttons start
+                 class="my-doggos__navbar-buttons-left">
+        <button ion-button
+                *ngIf="!isSelectMode"
+                (click)="toggleSelectMode()">
+            {{'MY_DOGGOS.SELECT_BUTTON' | translate }}
+        </button>
+        <button ion-button
+                *ngIf="isSelectMode"
+                (click)="toggleSelectMode()">
+            {{'MY_DOGGOS.CLOSE_BUTTON' | translate }}
+        </button>
+    </ion-buttons>
+
+    <ion-title *ngIf="showTitle">{{ 'MY_DOGGOS.TITLE' | translate }}</ion-title>
+
+    <ion-buttons end
+                 class="my-doggos__navbar-buttons-right">
+        <button ion-button icon-only> <!--(click)="addDoggo()"-->
+            <ion-icon name="add"></ion-icon>
+        </button>
+    </ion-buttons>
   </ion-navbar>
-  <ion-toolbar no-border-top>
-    <ion-searchbar placeholder="Filter Items" (ionInput)="filterDoggs($event)"></ion-searchbar>
+
+  <ion-toolbar no-border-top
+               class="my-doggs__toolbar">
+    <ion-searchbar class="my-doggos__toolbar-search"
+                   placeholder="Filter Items" 
+                   (ionInput)="filterDoggs($event)"></ion-searchbar>
+
+    <ion-buttons class="my-doggos__toolbar-buttons">
+      <button ion-button icon-end>
+          {{ 'MY_DOGGOS.FILTER_BUTTON' | translate }}
+          <ion-icon name="funnel"></ion-icon>
+      </button>
+      <button ion-button icon-end color="danger"
+              *ngIf="showButtons"
+              class="my-doggos__delete-button"
+              (click)="openDeleteMoreDoggosConfirmation()">
+        {{ 'MY_DOGGOS.DELETE_BUTTON' | translate }}
+        <ion-icon name="trash"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <!-- <ion-row class="my-doggos__toolbar-filters">
+      <ion-col width-20>
+        <ion-item>
+          <ion-label>Male</ion-label>
+          <ion-checkbox class="bar-button" item-end [(ngModel)]="male"></ion-checkbox>
+        </ion-item>
+      </ion-col>
+      <ion-col width-20>
+        <ion-item>
+          <ion-label>Female</ion-label>
+          <ion-checkbox class="bar-button" item-end [(ngModel)]="female"></ion-checkbox>
+        </ion-item>
+      </ion-col>
+      <ion-col width-20>
+        <ion-item>
+          <ion-label>Female</ion-label>
+          <ion-checkbox class="bar-button" item-end [(ngModel)]="female"></ion-checkbox>
+        </ion-item>
+      </ion-col>
+      <ion-col width-20>
+        <ion-item>
+          <ion-label>Female</ion-label>
+          <ion-checkbox class="bar-button" item-end [(ngModel)]="female"></ion-checkbox>
+        </ion-item>
+      </ion-col>
+    </ion-row> -->
   </ion-toolbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <ion-list class="my-doggos__list">
+    <ion-item-sliding *ngFor="let doggo of doggos"><!--(click)="openDoggoCard(doggo.id)"-->
 
-  <ion-row>
-      
-  </ion-row>
-    <ion-list class="my-doggos__list">
-        <ion-item-sliding *ngFor="let doggo of doggos"><!--(click)="openDoggoCard(doggo.id)"-->
-          <ion-item>
-            <ion-avatar item-start>
-              <img src="{{doggo.documents.image}}">
-            </ion-avatar>
-            <h2>Doggo1<!--doggo.name--></h2>
-          </ion-item>
-          <ion-item-options side="left">
-            <button ion-button color="secondary"><!--(click)="markDoggo(doggo.id)"-->
-              <ion-icon name="checkmark"></ion-icon>
-              Mark
-            </button>
-          </ion-item-options>
-          <ion-item-options side="right">
-            <button ion-button color="danger"><!--(click)="deleteDoggo(doggo.id)"-->
-              <ion-icon name="trash"></ion-icon>
-              Delete
-            </button>
-          </ion-item-options>
-        </ion-item-sliding>
+      <ion-item>
+        <ion-checkbox *ngIf="isSelectMode"
+                      (ionChange)="updateSelection(doggo.id)"></ion-checkbox>
+        <ion-avatar item-start>
+          <img src="{{doggo.documents.image}}">
+        </ion-avatar>
+        <h2>{{doggo.generalInfo.name}}</h2>
+      </ion-item>
+  
+      <ion-item-options side="right">
+        <button ion-button color="danger"
+                (click)="openDeleteConfirmation(doggo.id)">
+          <ion-icon name="trash"></ion-icon>
+          {{ 'MY_DOGGOS.DELETE_BUTTON' | translate }}
+        </button>
+      </ion-item-options>
 
-        <ion-item-sliding>
-            <ion-item>
-              <ion-avatar item-start>
-                <img src="../../assets/imgs/dog2.jpg">
-              </ion-avatar>
-              <h2>Doggo2</h2>
-            </ion-item>
-            <ion-item-options side="left">
-              <button ion-button color="primary">
-                <ion-icon name="text"></ion-icon>
-                Text
-              </button>
-              <button ion-button color="secondary">
-                <ion-icon name="call"></ion-icon>
-                Call
-              </button>
-            </ion-item-options>
-            <ion-item-options side="right">
-              <button ion-button color="primary">
-                <ion-icon name="mail"></ion-icon>
-                Email
-              </button>
-            </ion-item-options>
-          </ion-item-sliding>
-
-          <ion-item-sliding>
-              <ion-item>
-                <ion-avatar item-start>
-                  <img src="../../assets/imgs/dog3.jpeg">
-                </ion-avatar>
-                <h2>Slimer</h2>
-              </ion-item>
-              <ion-item-options side="left">
-                <button ion-button color="primary">
-                  <ion-icon name="text"></ion-icon>
-                  Text
-                </button>
-                <button ion-button color="secondary">
-                  <ion-icon name="call"></ion-icon>
-                  Call
-                </button>
-              </ion-item-options>
-              <ion-item-options side="right">
-                <button ion-button color="primary">
-                  <ion-icon name="mail"></ion-icon>
-                  Email
-                </button>
-              </ion-item-options>
-            </ion-item-sliding>
-      </ion-list>
-
+    </ion-item-sliding>
+  </ion-list>
 </ion-content>

@@ -1,0 +1,48 @@
+{
+    "DASHBOARD": {
+        "WELCOME": "Welcome to DoggoApp!",
+        "NUMBER_OF_MALE_DOGGOS": "Number of male Doggos",
+        "NUMBER_OF_FEMALE_DOGGOS": "Number of female Doggos"
+    },
+    "FOOTER_TAB": {
+        "HOME": "Home",
+        "MY_DOGGOS": "My Doggos",
+        "STATS": "Stats",
+        "ALARMS": "Alarms"
+    },
+    "MY_DOGGOS": {
+        "TITLE": "My Doggos",
+        "DELETE_CONFIRMATION": {
+            "TITLE": "Are you sure you want to delete {{ doggoName }}?",
+            "MESSAGE": "By clicking on 'Delete' button, you will lose this data permanently.",
+            "YES_BUTTON_LABEL": "Delete",
+            "NO_BUTTON_LABEL": "Cancel"
+        },
+        "DELETE_MORE_CONFIRMATION": {
+            "TITLE": "Are you sure you want to delete {{ doggoNumber }} doggos?",
+            "MESSAGE": "By clicking on 'Delete' button, you will lose this data permanently.",
+            "YES_BUTTON_LABEL": "Delete",
+            "NO_BUTTON_LABEL": "Cancel"
+        },
+        "SELECT_BUTTON": "Select",
+        "CLOSE_BUTTON": "Close",
+        "DELETE_BUTTON": "Delete",
+        "FILTER_BUTTON": "Filter"
+    },
+    "STATS": {
+
+    },
+    "ALARMS": {
+
+    },
+    "SETTINGS": {
+        "TITLE": "Settings",
+        "APPLY": "Apply",
+        "LANGUAGE": {
+            "TITLE": "Language",
+            "ENGLISH": "English",
+            "ITALIAN": "Italian",
+            "SERBIAN": "Serbian"
+        }
+    }
+}

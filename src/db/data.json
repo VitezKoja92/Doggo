@@ -1,269 +1,339 @@
 {
-    "doggos": [
+  "doggos": [
+    {
+      "id": "id1",
+      "generalInfo": {
+        "name": "DoggoName1",
+        "dateOfBirth": "2014, 1, 1",
+        "gender": "male",
+        "owner": "Owner1",
+        "breed": "Golden Retriever",
+        "color": "white",
+        "microchip": "2125645316454",
+        "loiJr": "545645fdsfs"
+      },
+      "documents": {
+        "image": "../assets/imgs/dog1.jpg",
+        "pedigreeFirstPage": "rodovnik1 - prva strana (pdf)",
+        "pedigreeSecondPage": "rodovnik1 - druga strana (pdf)",
+        "hipBoneRecordFirstPage": "snimak kukova1 - prva strana (pdf)",
+        "hipBoneRecordSecondPage": "snimak kukova1 - druga strana (pdf)",
+        "titerTest": "titar test1 (pdf)",
+        "registry": "iscrizione anagrafe canina2 (pdf)",
+        "otherDocuments": [
+          "otherDoc1(pdf)",
+          "otherDoc2(pdf)",
+          "otherDoc3(pdf)"
+        ]
+      },
+      "exhibitions": [
         {
-            "id": "id1",
-            "generalInfo": {
-                "name": "DoggoName2",
-                "dateOfBirth": "2014, 1, 1",
-                "gender": "male",
-                "owner": "Owner1",
-                "breed": "Golden Retriever",
-                "color": "white",
-                "microchip": "2125645316454",
-                "loiJr": "545645fdsfs"
-            },
-            "documents": {
-                "image": "../assets/imgs/dog1.jpg",
-                "pedigreeFirstPage": "rodovnik2 - prva strana (pdf)",
-                "pedigreeSecondPage": "rodovnik2 - druga strana (pdf)",
-                "hipBoneRecordFirstPage": "snimak kukova1 - prva strana (pdf)",
-                "hipBoneRecordSecondPage": "snimak kukova1 - druga strana (pdf)",
-                "titerTest": "titar test2 (pdf)",
-                "registry": "iscrizione anagrafe canina2 (pdf)",
-                "otherDocuments": [
-                    "otherDoc1(pdf)",
-                    "otherDoc2(pdf)",
-                    "otherDoc3(pdf)"
-                ]
-            },
-            "exhibitions": [
-                {
-                    "name": "ime izlozbe1",
-                    "receipt": "izlozba1 (jpeg)"
-                },
-                {
-                    "name": "ime izlozbe2",
-                    "receipt": "izlozba2 (jpeg)"
-                },
-                {
-                    "name": "ime izlozbe3",
-                    "receipt": "izlozba3 (jpeg)"
-                }
-            ],
-            "sanitaryData": {
-                "dateOfVaccineAgainstInfectiousDiseases": "2014, 3, 1",
-                "dateOfParasiteCleaning": "2014, 3, 1",
-                "dateOfVaccineAgainstRabies": "2014, 3, 1",
-                "datesOfBreastfeeding": [
-                    "2014, 12, 1",
-                    "2015, 5, 1",
-                    "2016, 5, 1",
-                    "2016, 5, 1"
-                ],
-                "dateOfLastPeriod": "2016, 3, 1"
-            }
+          "name": "ime izlozbe1",
+          "receipt": "izlozba1 (jpeg)"
         },
         {
-            "id": "id2",
-            "generalInfo": {
-                "name": "DoggoName1",
-                "dateOfBirth": "2014, 1, 1",
-                "gender": "male",
-                "owner": "Owner1",
-                "breed": "Golden Retriever",
-                "color": "gold",
-                "microchip": "21231234",
-                "loiJr": "mdas1231231"
-            },
-            "documents": {
-                "image": "../assets/imgs/dog2.jpg",
-                "pedigreeFirstPage": "rodovnik2 - prva strana (pdf)",
-                "pedigreeSecondPage": "rodovnik2 - druga strana (pdf)",
-                "hipBoneRecordFirstPage": "snimak kukova2 - prva strana (pdf)",
-                "hipBoneRecordSecondPage": "snimak kukova2 - druga strana (pdf)",
-                "titerTest": "titar test1 (pdf)",
-                "registry": "iscrizione anagrafe canina1 (pdf)",
-                "otherDocuments": [
-                    "otherDoc1(pdf)",
-                    "otherDoc2(pdf)",
-                    "otherDoc3(pdf)"
-                ]
-            },
-            "exhibitions": [
-                {
-                    "name": "ime izlozbe1",
-                    "receipt": "izlozba1 (jpeg)"
-                },
-                {
-                    "name": "ime izlozbe2",
-                    "receipt": "izlozba2 (jpeg)"
-                },
-                {
-                    "name": "ime izlozbe3",
-                    "receipt": "izlozba3 (jpeg)"
-                }
-            ],
-            "sanitaryData": {
-                "dateOfVaccineAgainstInfectiousDiseases": "2014, 3, 1",
-                "dateOfParasiteCleaning": "2014, 3, 1",
-                "dateOfVaccineAgainstRabies": "2014, 3, 1",
-                "datesOfBreastfeeding": [
-                    "2014, 12, 1",
-                    "2015, 5, 1",
-                    "2016, 5, 1",
-                    "2016, 6, 1"
-                ],
-                "dateOfLastPeriod": "2016, 4, 1"
-            }
+          "name": "ime izlozbe2",
+          "receipt": "izlozba2 (jpeg)"
         },
         {
-            "id": "id3",
-            "generalInfo": {
-                "name": "DoggoName3",
-                "dateOfBirth": "2014, 1, 1",
-                "gender": "male",
-                "owner": "Owner2",
-                "breed": "Golden Retriever",
-                "color": "gold",
-                "microchip": "terte4534",
-                "loiJr": "mdasxc12xvcv31231"
-            },
-            "documents": {
-                "image": "../assets/imgs/dog3.jpeg",
-                "pedigreeFirstPage": "rodovnik3 - prva strana (pdf)",
-                "pedigreeSecondPage": "rodovnik3 - druga strana (pdf)",
-                "hipBoneRecordFirstPage": "snimak kukova3 - prva strana (pdf)",
-                "hipBoneRecordSecondPage": "snimak kukova3 - druga strana (pdf)",
-                "titerTest": "titar test3 (pdf)",
-                "registry": "iscrizione anagrafe canina3 (pdf)",
-                "otherDocuments": [
-                    "otherDoc1(pdf)",
-                    "otherDoc2(pdf)",
-                    "otherDoc3(pdf)"
-                ]
-            },
-            "exhibitions": [
-                {
-                    "name": "ime izlozbe3",
-                    "receipt": "izlozba1 (jpeg)"
-                },
-                {
-                    "name": "ime izlozbe5",
-                    "receipt": "izlozba2 (jpeg)"
-                },
-                {
-                    "name": "ime izlozbe7",
-                    "receipt": "izlozba3 (jpeg)"
-                }
-            ],
-            "sanitaryData": {
-                "dateOfVaccineAgainstInfectiousDiseases": "2014, 3, 1",
-                "dateOfParasiteCleaning": "2014, 3, 1",
-                "dateOfVaccineAgainstRabies": "2014, 3, 1",
-                "datesOfBreastfeeding": [
-                    "2014, 12, 1",
-                    "2015, 5, 1",
-                    "2016, 5, 1",
-                    "2016, 7, 1"
-                ],
-                "dateOfLastPeriod": "2016, 5, 1"
-            }
-        },
-        {
-            "id": "id4",
-            "generalInfo": {
-                "name": "DoggoName4",
-                "dateOfBirth": "2012, 1, 1",
-                "gender": "male",
-                "owner": "Owner2",
-                "breed": "Golden Retriever",
-                "color": "gold",
-                "microchip": "212309k1234",
-                "loiJr": "mdas1231kk231"
-            },
-            "documents": {
-                "image": "../assets/imgs/dog4.jpg",
-                "pedigreeFirstPage": "rodovnik4 - prva strana (pdf)",
-                "pedigreeSecondPage": "rodovnik4 - druga strana (pdf)",
-                "hipBoneRecordFirstPage": "snimak kukova4 - prva strana (pdf)",
-                "hipBoneRecordSecondPage": "snimak kukova4 - druga strana (pdf)",
-                "titerTest": "titar test4 (pdf)",
-                "registry": "iscrizione anagrafe canina4 (pdf)",
-                "otherDocuments": [
-                    "otherDoc1(pdf)",
-                    "otherDoc2(pdf)",
-                    "otherDoc3(pdf)"
-                ]
-            },
-            "exhibitions": [
-                {
-                    "name": "ime izlozbe12",
-                    "receipt": "izlozba1 (jpeg)"
-                },
-                {
-                    "name": "ime izlozbe23",
-                    "receipt": "izlozba2 (jpeg)"
-                },
-                {
-                    "name": "ime izlozbe34",
-                    "receipt": "izlozba3 (jpeg)"
-                }
-            ],
-            "sanitaryData": {
-                "dateOfVaccineAgainstInfectiousDiseases": "2014, 3, 1",
-                "dateOfParasiteCleaning": "2014, 3, 1",
-                "dateOfVaccineAgainstRabies": "2014, 3, 1",
-                "datesOfBreastfeeding": [
-                    "2014, 12, 1",
-                    "2015, 5, 1",
-                    "2016, 5, 1",
-                    "2016, 8, 1"
-                ],
-                "dateOfLastPeriod": "2016, 6, 1"
-            }
-        },
-        {
-            "id": "id5",
-            "generalInfo": {
-                "name": "DoggoName5",
-                "dateOfBirth": "2010, 1, 1",
-                "gender": "female",
-                "owner": "Owner3",
-                "breed": "Golden Retriever",
-                "color": "gold",
-                "microchip": "12121",
-                "loiJr": "mdas1231456231"
-            },
-            "documents": {
-                "image": "../assets/imgs/dog5.jpg",
-                "pedigreeFirstPage": "rodovnik5 - prva strana (pdf)",
-                "pedigreeSecondPage": "rodovnik5 - druga strana (pdf)",
-                "hipBoneRecordFirstPage": "snimak kukova5 - prva strana (pdf)",
-                "hipBoneRecordSecondPage": "snimak kukova5 - druga strana (pdf)",
-                "titerTest": "titar test1 (pdf)",
-                "registry": "iscrizione anagrafe canina5 (pdf)",
-                "otherDocuments": [
-                    "otherDoc1(pdf)",
-                    "otherDoc2(pdf)",
-                    "otherDoc3(pdf)"
-                ]
-            },
-            "exhibitions": [
-                {
-                    "name": "ime izlozbe16",
-                    "receipt": "izlozba1 (jpeg)"
-                },
-                {
-                    "name": "ime izlozbe26",
-                    "receipt": "izlozba2 (jpeg)"
-                },
-                {
-                    "name": "ime izlozbe36",
-                    "receipt": "izlozba3 (jpeg)"
-                }
-            ],
-            "sanitaryData": {
-                "dateOfVaccineAgainstInfectiousDiseases": "2014, 3, 1",
-                "dateOfParasiteCleaning": "2014, 3, 1",
-                "dateOfVaccineAgainstRabies": "2014, 3, 1",
-                "datesOfBreastfeeding": [
-                    "2014, 12, 1",
-                    "2015, 5, 1",
-                    "2016, 5, 1",
-                    "2016, 9, 1"
-                ],
-                "dateOfLastPeriod": "2016, 7, 1"
-            }
+          "name": "ime izlozbe3",
+          "receipt": "izlozba3 (jpeg)"
         }
-    ]
+      ],
+      "sanitaryData": {
+        "dateOfVaccineAgainstInfectiousDiseases": "2014, 3, 1",
+        "dateOfParasiteCleaning": "2014, 3, 1",
+        "dateOfVaccineAgainstRabies": "2014, 3, 1",
+        "datesOfBreastfeeding": [
+          "2014, 12, 1",
+          "2015, 5, 1",
+          "2016, 5, 1",
+          "2016, 5, 1"
+        ],
+        "dateOfLastPeriod": "2016, 3, 1"
+      }
+    },
+    {
+      "id": "id7",
+      "generalInfo": {
+        "name": "DoggoName7",
+        "dateOfBirth": "2010, 1, 1",
+        "gender": "female",
+        "owner": "Owner3",
+        "breed": "Golden Retriever",
+        "color": "gold",
+        "microchip": "12121",
+        "loiJr": "mdas1231456231"
+      },
+      "documents": {
+        "image": "../assets/imgs/dog4.jpg",
+        "pedigreeFirstPage": "rodovnik7 - prva strana (pdf)",
+        "pedigreeSecondPage": "rodovnik7 - druga strana (pdf)",
+        "hipBoneRecordFirstPage": "snimak kukova7 - prva strana (pdf)",
+        "hipBoneRecordSecondPage": "snimak kukova7 - druga strana (pdf)",
+        "titerTest": "titar test7 (pdf)",
+        "registry": "iscrizione anagrafe canina7 (pdf)",
+        "otherDocuments": [
+          "otherDoc1(pdf)",
+          "otherDoc2(pdf)",
+          "otherDoc3(pdf)"
+        ]
+      },
+      "exhibitions": [
+        {
+          "name": "ime izlozbe17",
+          "receipt": "izlozba1 (jpeg)"
+        },
+        {
+          "name": "ime izlozbe27",
+          "receipt": "izlozba2 (jpeg)"
+        },
+        {
+          "name": "ime izlozbe37",
+          "receipt": "izlozba3 (jpeg)"
+        }
+      ],
+      "sanitaryData": {
+        "dateOfVaccineAgainstInfectiousDiseases": "2014, 3, 1",
+        "dateOfParasiteCleaning": "2014, 3, 1",
+        "dateOfVaccineAgainstRabies": "2014, 3, 1",
+        "datesOfBreastfeeding": [
+          "2014, 12, 1",
+          "2015, 5, 1",
+          "2016, 5, 1",
+          "2016, 9, 1"
+        ],
+        "dateOfLastPeriod": "2016, 7, 1"
+      }
+    },
+    {
+      "id": "id8",
+      "generalInfo": {
+        "name": "DoggoName8",
+        "dateOfBirth": "2010, 1, 1",
+        "gender": "female",
+        "owner": "Owner2",
+        "breed": "Golden Retriever",
+        "color": "gold",
+        "microchip": "12121",
+        "loiJr": "mdas1231456231"
+      },
+      "documents": {
+        "image": "../assets/imgs/dog2.jpg",
+        "pedigreeFirstPage": "rodovnik5 - prva strana (pdf)",
+        "pedigreeSecondPage": "rodovnik5 - druga strana (pdf)",
+        "hipBoneRecordFirstPage": "snimak kukova8 - prva strana (pdf)",
+        "hipBoneRecordSecondPage": "snimak kukova8 - druga strana (pdf)",
+        "titerTest": "titar test8 (pdf)",
+        "registry": "iscrizione anagrafe canina8 (pdf)",
+        "otherDocuments": [
+          "otherDoc1(pdf)",
+          "otherDoc2(pdf)",
+          "otherDoc3(pdf)"
+        ]
+      },
+      "exhibitions": [
+        {
+          "name": "ime izlozbe18",
+          "receipt": "izlozba1 (jpeg)"
+        },
+        {
+          "name": "ime izlozbe28",
+          "receipt": "izlozba2 (jpeg)"
+        },
+        {
+          "name": "ime izlozbe38",
+          "receipt": "izlozba3 (jpeg)"
+        }
+      ],
+      "sanitaryData": {
+        "dateOfVaccineAgainstInfectiousDiseases": "2014, 3, 1",
+        "dateOfParasiteCleaning": "2014, 3, 1",
+        "dateOfVaccineAgainstRabies": "2014, 3, 1",
+        "datesOfBreastfeeding": [
+          "2014, 12, 1",
+          "2015, 5, 1",
+          "2016, 5, 1",
+          "2016, 9, 1"
+        ],
+        "dateOfLastPeriod": "2016, 7, 1"
+      }
+    },
+    {
+      "id": "id9",
+      "generalInfo": {
+        "name": "DoggoName9",
+        "dateOfBirth": "2010, 1, 1",
+        "gender": "female",
+        "owner": "Owner2",
+        "breed": "Golden Retriever",
+        "color": "gold",
+        "microchip": "12121",
+        "loiJr": "mdas1231456231"
+      },
+      "documents": {
+        "image": "../assets/imgs/dog1.jpg",
+        "pedigreeFirstPage": "rodovnik9 - prva strana (pdf)",
+        "pedigreeSecondPage": "rodovnik9 - druga strana (pdf)",
+        "hipBoneRecordFirstPage": "snimak kukova9 - prva strana (pdf)",
+        "hipBoneRecordSecondPage": "snimak kukova9 - druga strana (pdf)",
+        "titerTest": "titar test9 (pdf)",
+        "registry": "iscrizione anagrafe canina9 (pdf)",
+        "otherDocuments": [
+          "otherDoc1(pdf)",
+          "otherDoc2(pdf)",
+          "otherDoc3(pdf)"
+        ]
+      },
+      "exhibitions": [
+        {
+          "name": "ime izlozbe19",
+          "receipt": "izlozba1 (jpeg)"
+        },
+        {
+          "name": "ime izlozbe29",
+          "receipt": "izlozba2 (jpeg)"
+        },
+        {
+          "name": "ime izlozbe39",
+          "receipt": "izlozba3 (jpeg)"
+        }
+      ],
+      "sanitaryData": {
+        "dateOfVaccineAgainstInfectiousDiseases": "2014, 3, 1",
+        "dateOfParasiteCleaning": "2014, 3, 1",
+        "dateOfVaccineAgainstRabies": "2014, 3, 1",
+        "datesOfBreastfeeding": [
+          "2014, 12, 1",
+          "2015, 5, 1",
+          "2016, 5, 1",
+          "2016, 9, 1"
+        ],
+        "dateOfLastPeriod": "2016, 7, 1"
+      }
+    },
+    {
+      "id": "id10",
+      "generalInfo": {
+        "name": "DoggoName10",
+        "dateOfBirth": "2010, 1, 1",
+        "gender": "female",
+        "owner": "Owner3",
+        "breed": "Golden Retriever",
+        "color": "gold",
+        "microchip": "12121",
+        "loiJr": "mdas1231456231"
+      },
+      "documents": {
+        "image": "../assets/imgs/dog2.jpg",
+        "pedigreeFirstPage": "rodovnik10 - prva strana (pdf)",
+        "pedigreeSecondPage": "rodovnik10 - druga strana (pdf)",
+        "hipBoneRecordFirstPage": "snimak kukova10 - prva strana (pdf)",
+        "hipBoneRecordSecondPage": "snimak kukova10 - druga strana (pdf)",
+        "titerTest": "titar test10 (pdf)",
+        "registry": "iscrizione anagrafe canina10 (pdf)",
+        "otherDocuments": [
+          "otherDoc1(pdf)",
+          "otherDoc2(pdf)",
+          "otherDoc3(pdf)"
+        ]
+      },
+      "exhibitions": [
+        {
+          "name": "ime izlozbe110",
+          "receipt": "izlozba1 (jpeg)"
+        },
+        {
+          "name": "ime izlozbe210",
+          "receipt": "izlozba2 (jpeg)"
+        },
+        {
+          "name": "ime izlozbe310",
+          "receipt": "izlozba3 (jpeg)"
+        }
+      ],
+      "sanitaryData": {
+        "dateOfVaccineAgainstInfectiousDiseases": "2014, 3, 1",
+        "dateOfParasiteCleaning": "2014, 3, 1",
+        "dateOfVaccineAgainstRabies": "2014, 3, 1",
+        "datesOfBreastfeeding": [
+          "2014, 12, 1",
+          "2015, 5, 1",
+          "2016, 5, 1",
+          "2016, 9, 1"
+        ],
+        "dateOfLastPeriod": "2016, 7, 1"
+      }
+    },
+    {
+      "id": "id11",
+      "generalInfo": {
+        "name": "DoggoName11",
+        "dateOfBirth": "2010, 1, 1",
+        "gender": "female",
+        "owner": "Owner2",
+        "breed": "Golden Retriever",
+        "color": "gold",
+        "microchip": "12121",
+        "loiJr": "mdas1231456231"
+      },
+      "documents": {
+        "image": "../assets/imgs/dog2.jpg",
+        "pedigreeFirstPage": "rodovnik11 - prva strana (pdf)",
+        "pedigreeSecondPage": "rodovnik11 - druga strana (pdf)",
+        "hipBoneRecordFirstPage": "snimak kukova11 - prva strana (pdf)",
+        "hipBoneRecordSecondPage": "snimak kukova11 - druga strana (pdf)",
+        "titerTest": "titar test11 (pdf)",
+        "registry": "iscrizione anagrafe canina11 (pdf)",
+        "otherDocuments": [
+          "otherDoc1(pdf)",
+          "otherDoc2(pdf)",
+          "otherDoc3(pdf)"
+        ]
+      },
+      "exhibitions": [
+        {
+          "name": "ime izlozbe111",
+          "receipt": "izlozba1 (jpeg)"
+        },
+        {
+          "name": "ime izlozbe211",
+          "receipt": "izlozba2 (jpeg)"
+        },
+        {
+          "name": "ime izlozbe311",
+          "receipt": "izlozba3 (jpeg)"
+        }
+      ],
+      "sanitaryData": {
+        "dateOfVaccineAgainstInfectiousDiseases": "2014, 3, 1",
+        "dateOfParasiteCleaning": "2014, 3, 1",
+        "dateOfVaccineAgainstRabies": "2014, 3, 1",
+        "datesOfBreastfeeding": [
+          "2014, 12, 1",
+          "2015, 5, 1",
+          "2016, 5, 1",
+          "2016, 9, 1"
+        ],
+        "dateOfLastPeriod": "2016, 7, 1"
+      }
+    }
+  ],
+  "languages": [
+    {
+      "fullName": "English",
+      "shortName": "en",
+      "icon": "ukFlag.png"
+    },
+    {
+      "fullName": "Italian",
+      "shortName": "it",
+      "icon": "italyFlag.jpeg"
+    },
+    {
+      "fullName": "Serbian",
+      "shortName": "rs",
+      "icon": "serbianFlag.png"
+    }
+  ]
 }

@@ -2,21 +2,21 @@ import { TranslateModule } from '@ngx-translate/core';
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 
-import { MyDoggosPage } from './my-doggos';
+import { SettingsPage } from './settings';
 
 @NgModule({
   declarations: [
-    MyDoggosPage,
+    SettingsPage,
   ],
   imports: [
-    IonicPageModule.forChild(MyDoggosPage),
+    IonicPageModule.forChild(SettingsPage),
     TranslateModule
   ],
   exports: [
-    MyDoggosPage
+    SettingsPage
   ],
   entryComponents: [
-    MyDoggosPage
+    SettingsPage
   ]
 })
-export class MyDoggosPageModule {}
+export class SettingsPageModule {}

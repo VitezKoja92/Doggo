@@ -2,6 +2,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
 import { DoggosEndpointService } from './doggosEndpoint.service';
+import { LanguageEndpointService } from './languageEndpoint.service';
 
 @NgModule({
     imports: [
@@ -10,7 +11,8 @@ import { DoggosEndpointService } from './doggosEndpoint.service';
     declarations: [],
     exports: [],
     providers: [
-        DoggosEndpointService
+        DoggosEndpointService,
+        LanguageEndpointService
     ]
 })
 

@@ -2,6 +2,14 @@
 
   <ion-navbar>
     <ion-title>Home</ion-title>
+    <ion-buttons end
+                 class="dashboard__navbar-buttons">
+        <button ion-button
+                icon-only
+                (click)="openSettings()">
+            <ion-icon name="settings"></ion-icon>
+        </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -11,11 +19,11 @@
              class="dashboard">
   <ion-row class="dashboard__intro">
     <span class="dashboard__intro-text">
-      Welcome to DoggoApp!
+      {{ 'DASHBOARD.WELCOME' | translate }}
     </span>
   </ion-row>
 
-  <ion-row padding>
+  <ion-row>
       <img class="dashboard__img"
            id="dashboard_img"
            src="../../assets/imgs/french2-mid.gif"
@@ -23,23 +31,23 @@
   </ion-row>
 
   <!--Overview with statistics-->
-  <ion-row class="dashboard__overview">
+  <ion-footer class="dashboard__overview">
       <ion-card class="dashboard__overview-card">
         
         <ion-item>
           <ion-icon name='male'
                     class="dashboard__male-stats-icon" 
                     item-start></ion-icon>
-            Number of male Doggos
-          <ion-badge item-end>26</ion-badge>
+            {{ 'DASHBOARD.NUMBER_OF_MALE_DOGGOS' | translate }}
+          <ion-badge item-end>{{ numberOfMaleDoggos }}</ion-badge>
         </ion-item>
         <ion-item>
           <ion-icon name='female'
                     class="dashboard__female-stats-icon" 
                     item-start></ion-icon>
-            Number of female Doggos
-          <ion-badge item-end>26</ion-badge>
+            {{ 'DASHBOARD.NUMBER_OF_FEMALE_DOGGOS' | translate }}
+          <ion-badge item-end>{{ numberOfFemaleDoggos }}</ion-badge>
         </ion-item>
       </ion-card>
-  </ion-row>
+  </ion-footer>
 </ion-content>

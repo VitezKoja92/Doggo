@@ -1,0 +1,36 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ 'SETTINGS.TITLE' | translate }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding
+  class="settings__content">
+
+  <ion-list>
+    <ion-item>
+      <ion-label>{{ 'SETTINGS.LANGUAGE.TITLE' | translate }}</ion-label>
+      <ion-select [(ngModel)]="languageChoice"
+                  interface="popover">
+        <ion-option *ngFor="let language of languages" value="{{language.shortName}}">
+            <img class="settings__language-img"
+            src="../../assets/imgs/{{ language.icon }}">
+          {{ ('SETTINGS.LANGUAGE.' + ( language.fullName | uppercase) ) | translate }}
+        </ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  
+</ion-content>
+
+<ion-footer class="settings__footer">
+  <button ion-button icon-end
+          class="settings__apply-button"
+          (click)="dissmissSettingsModal()">
+    {{ 'SETTINGS.APPLY' | translate }}
+    <ion-icon name="checkmark-circle-outline"></ion-icon>
+  </button>
+</ion-footer>

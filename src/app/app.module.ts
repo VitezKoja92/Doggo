@@ -1,21 +1,26 @@
-import { DoggosEndpointService } from './../rest/api/doggosEndpoint.service';
-import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { IonicStorageModule } from '@ionic/storage';
+import { HttpClient, HttpClientModule } from "@angular/common/http";
+import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
+import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 
-import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { DashboardPageModule } from './../pages/dashboard/dashboard.module';
-import { FooterTabPageModule } from './../pages/footer-tab/footer-tab.module';
 import { DashboardPage } from './../pages/dashboard/dashboard';
+import { DashboardPageModule } from './../pages/dashboard/dashboard.module';
 import { FooterTabPage } from './../pages/footer-tab/footer-tab';
-import { MyDoggosPageModule } from './../pages/my-doggos/my-doggos.module';
+import { FooterTabPageModule } from './../pages/footer-tab/footer-tab.module';
+import { HomePage } from '../pages/home/home';
+import { MyApp } from './app.component';
 import { MyDoggosPage } from './../pages/my-doggos/my-doggos';
-import { StatsPageModule } from './../pages/stats/stats.module';
+import { MyDoggosPageModule } from './../pages/my-doggos/my-doggos.module';
+import { RestApiModule } from './../rest/api/rest-api.module';
 import { StatsPage } from './../pages/stats/stats';
+import { StatsPageModule } from './../pages/stats/stats.module';
+import { SettingsPageModule } from './../pages/settings/settings.module';
+
 
 @NgModule({
   declarations: [
@@ -27,9 +32,19 @@ import { StatsPage } from './../pages/stats/stats';
     DashboardPageModule,
     FooterTabPageModule,
     StatsPageModule,
+    SettingsPageModule,
+    RestApiModule,
     MyDoggosPageModule,
     IonicModule.forRoot(MyApp),
     HttpClientModule,
+    IonicStorageModule.forRoot(),
+    TranslateModule.forRoot({
+      loader: {
+          provide: TranslateLoader,
+          useFactory: (HttpLoaderFactory),
+          deps: [HttpClient]
+      }
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -43,8 +58,11 @@ import { StatsPage } from './../pages/stats/stats';
   providers: [
     StatusBar,
     SplashScreen,
-    DoggosEndpointService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
 export class AppModule {}
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}

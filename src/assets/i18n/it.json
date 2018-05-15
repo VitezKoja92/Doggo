@@ -1,0 +1,32 @@
+{
+    "DASHBOARD": {
+        "WELCOME": "Welcome to DoggoApp!(it)",
+        "NUMBER_OF_MALE_DOGGOS": "Number of male Doggos",
+        "NUMBER_OF_FEMALE_DOGGOS": "Number of female Doggos"
+    },
+    "FOOTER_TAB": {
+        "HOME": "Home",
+        "MY_DOGGOS": "My Doggos",
+        "STATS": "Stats",
+        "ALARMS": "Alarms"
+    },
+    "MY_DOGGOS": {
+        "TITLE": "My Doggos"
+    },
+    "STATS": {
+
+    },
+    "ALARMS": {
+
+    },
+    "SETTINGS": {
+        "TITLE": "Settings",
+        "APPLY": "Apply",
+        "LANGUAGE": {
+            "TITLE": "Language",
+            "ENGLISH": "English",
+            "ITALIAN": "Italian",
+            "SERBIAN": "Serbian"
+        }
+    }
+}

@@ -16,6 +16,14 @@ page-dashboard {
             justify-content: center;
         }
 
+        &__navbar-buttons button {
+            margin-right: 5px;
+        }
+
+        &__img {
+            width: 100%;
+        }
+
 
         &__male-stats-icon {
             color: $color-male;
@@ -26,9 +34,10 @@ page-dashboard {
             font-weight: 600;
         }
 
-        // &__overview-card ion-item {
-        //     background-color: color($colors, carbon);
-        // }
+        &__overview-card {
+            width: 100%;
+            margin: 20px 0;
+        }
     }
 
 
