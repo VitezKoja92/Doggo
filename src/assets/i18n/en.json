@@ -27,7 +27,42 @@
         "SELECT_BUTTON": "Select",
         "CLOSE_BUTTON": "Close",
         "DELETE_BUTTON": "Delete",
-        "FILTER_BUTTON": "Filter"
+        "FILTER_BUTTON": "Filter",
+        "NO_RESULTS_MESSAGE": "No Doggos found ..."
+    },
+    "MY_DOGGOS_FILTERS": {
+        "FOOTER": {
+            "SUBMIT_BUTTON_LABEL": "Submit",
+            "DISMISS_BUTTON_LABEL": "Dismiss",
+            "RESTART_BUTTON_LABEL": "Restart"
+        },
+        "FILTERS": {
+            "GENDER": {
+                "TITLE": "Gender:",
+                "MALE": "Male",
+                "FEMALE": "Female"
+            },
+            "BREED": {
+                "TITLE": "Breed:",
+                "GOLDEN_RETRIEVER": "Golden Retriever",
+                "FRENCH_BULLDOG": "French Bulldog",
+                "LABRADOR": "Labrador"
+            },
+            "COLOR": {
+                "TITLE": "Color:",
+                "CREAM": "Cream",
+                "BRINDLE": "Brindle",
+                "CHOCOLATE": "Chocolate",
+                "BLACK": "Black",
+                "PIED": "Pied (white with black)",
+                "BLUE": "Blue",
+                "GOLD": "Gold",
+                "WHITE": "White"
+            },
+            "AGE": {
+                "TITLE": "Age:"
+            }
+        }
     },
     "STATS": {
 

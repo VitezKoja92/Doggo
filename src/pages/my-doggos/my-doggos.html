@@ -1,7 +1,7 @@
 <ion-header>
-
+  <!-- *** NAVBAR *** -->
   <ion-navbar>
-
+    <!--SELECT/CLOSE BUTTON-->
     <ion-buttons start
                  class="my-doggos__navbar-buttons-left">
         <button ion-button
@@ -16,8 +16,10 @@
         </button>
     </ion-buttons>
 
+    <!--MY-DOGGOS TITLE-->
     <ion-title *ngIf="showTitle">{{ 'MY_DOGGOS.TITLE' | translate }}</ion-title>
 
+    <!--ADD-DOGGO BUTTON-->
     <ion-buttons end
                  class="my-doggos__navbar-buttons-right">
         <button ion-button icon-only> <!--(click)="addDoggo()"-->
@@ -26,70 +28,65 @@
     </ion-buttons>
   </ion-navbar>
 
+  
+  <!-- *** TOOLBAR *** -->
   <ion-toolbar no-border-top
                class="my-doggs__toolbar">
-    <ion-searchbar class="my-doggos__toolbar-search"
-                   placeholder="Filter Items" 
-                   (ionInput)="filterDoggs($event)"></ion-searchbar>
 
-    <ion-buttons class="my-doggos__toolbar-buttons">
-      <button ion-button icon-end>
+
+
+    <!--SEARCH FIELD-->
+    <ion-searchbar class="my-doggos__toolbar-search"
+                   placeholder="Filter Items (dog, owner, microchip, LOI, JR)"
+                   (ionInput)="onSearchInput()"
+                   [(ngModel)]="searchTerm"
+                   [formControl]="searchControl"></ion-searchbar>
+
+    <!--LOADING SPINNER-->
+    <div class="my-doggos__toolbar-spinner-container"
+         *ngIf="isSearching">
+      <ion-spinner></ion-spinner>
+    </div>
+
+
+    <ion-buttons class="my-doggos__toolbar-buttons"
+                 *ngIf="!isSearching">
+      <!--FILTER BUTTON-->
+      <button ion-button icon-end
+              class="my-doggos__toolbar-button my-doggos__filter-button"
+              [disabled]="disableFilterButton"
+              (click)="openFilterPopover($event)">
           {{ 'MY_DOGGOS.FILTER_BUTTON' | translate }}
-          <ion-icon name="funnel"></ion-icon>
+          <ion-icon name="color-wand"
+                    *ngIf="!filterOpened"></ion-icon>
+          <ion-icon name="arrow-down"
+                    *ngIf="filterOpened"></ion-icon>
       </button>
+      <!--DELETE BUTTON-->
       <button ion-button icon-end color="danger"
-              *ngIf="showButtons"
-              class="my-doggos__delete-button"
+              *ngIf="showDeleteButton"
+              class="my-doggos__toolbar-button my-doggos__delete-button"
               (click)="openDeleteMoreDoggosConfirmation()">
-        {{ 'MY_DOGGOS.DELETE_BUTTON' | translate }}
-        <ion-icon name="trash"></ion-icon>
+          {{ 'MY_DOGGOS.DELETE_BUTTON' | translate }}
+          <ion-icon name="trash"></ion-icon>
       </button>
     </ion-buttons>
-
-    <!-- <ion-row class="my-doggos__toolbar-filters">
-      <ion-col width-20>
-        <ion-item>
-          <ion-label>Male</ion-label>
-          <ion-checkbox class="bar-button" item-end [(ngModel)]="male"></ion-checkbox>
-        </ion-item>
-      </ion-col>
-      <ion-col width-20>
-        <ion-item>
-          <ion-label>Female</ion-label>
-          <ion-checkbox class="bar-button" item-end [(ngModel)]="female"></ion-checkbox>
-        </ion-item>
-      </ion-col>
-      <ion-col width-20>
-        <ion-item>
-          <ion-label>Female</ion-label>
-          <ion-checkbox class="bar-button" item-end [(ngModel)]="female"></ion-checkbox>
-        </ion-item>
-      </ion-col>
-      <ion-col width-20>
-        <ion-item>
-          <ion-label>Female</ion-label>
-          <ion-checkbox class="bar-button" item-end [(ngModel)]="female"></ion-checkbox>
-        </ion-item>
-      </ion-col>
-    </ion-row> -->
   </ion-toolbar>
-
 </ion-header>
 
-
+<!-- *** CONTENT *** -->
 <ion-content padding>
+  <!--DOGGOS LIST-->  
   <ion-list class="my-doggos__list">
     <ion-item-sliding *ngFor="let doggo of doggos"><!--(click)="openDoggoCard(doggo.id)"-->
-
       <ion-item>
         <ion-checkbox *ngIf="isSelectMode"
                       (ionChange)="updateSelection(doggo.id)"></ion-checkbox>
         <ion-avatar item-start>
           <img src="{{doggo.documents.image}}">
         </ion-avatar>
-        <h2>{{doggo.generalInfo.name}}</h2>
+        <h2>{{ doggo.generalInfo.name }}</h2>
       </ion-item>
-  
       <ion-item-options side="right">
         <button ion-button color="danger"
                 (click)="openDeleteConfirmation(doggo.id)">
@@ -97,7 +94,11 @@
           {{ 'MY_DOGGOS.DELETE_BUTTON' | translate }}
         </button>
       </ion-item-options>
-
     </ion-item-sliding>
   </ion-list>
+
+  <p class="my-doggos__no-results"
+        *ngIf="noSearchResults">
+        {{ 'MY_DOGGOS.NO_RESULTS_MESSAGE' | translate }}
+  </p>
 </ion-content>

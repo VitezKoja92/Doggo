@@ -20,7 +20,7 @@ import { RestApiModule } from './../rest/api/rest-api.module';
 import { StatsPage } from './../pages/stats/stats';
 import { StatsPageModule } from './../pages/stats/stats.module';
 import { SettingsPageModule } from './../pages/settings/settings.module';
-
+import { MyDoggosFiltersPageModule } from './../pages/my-doggos-filters/my-doggos-filters.module';
 
 @NgModule({
   declarations: [
@@ -35,6 +35,7 @@ import { SettingsPageModule } from './../pages/settings/settings.module';
     SettingsPageModule,
     RestApiModule,
     MyDoggosPageModule,
+    MyDoggosFiltersPageModule,
     IonicModule.forRoot(MyApp),
     HttpClientModule,
     IonicStorageModule.forRoot(),

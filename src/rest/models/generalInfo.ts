@@ -1,5 +1,5 @@
+import { BreedEnum } from './../enums/breedEnum';
 import { ColorEnum } from './../enums/colorEnum';
-import { RaceEnum } from './../enums/raceEnum';
 import { GenderEnum } from "../enums/genderEnum";
 
 export interface GeneralInfo {
@@ -7,7 +7,7 @@ export interface GeneralInfo {
     dateOfBirth: Date;
     gender: GenderEnum;
     owner?: string;
-    breed?: RaceEnum;
+    breed?: BreedEnum;
     color?: ColorEnum;
     microchip: string;
     loiJr: string; 

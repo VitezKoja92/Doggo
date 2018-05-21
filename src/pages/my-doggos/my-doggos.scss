@@ -18,14 +18,43 @@ page-my-doggos {
             display: flex;
         }
 
-        &__toolbar-buttons{
-            display: inline-block;
-        }
+        &__toolbar-spinner-container {
+            width: 100%;
+            text-align: center;
+            padding: 4.5px;
 
-        &__toolbar-filters {
-            ion-item {
-                display: inline-block;
+            ion-spinner {
+                height: 20px;
+                width: 20px;
             }
         }
+
+        &__no-results {
+            color: darkgray;
+            text-align: center;
+            font-size: $fs-16;
+            width: 100%;
+        }
+
+        &__toolbar-buttons{
+            display: flex;
+            justify-content: space-between;
+            margin: 0 5px;
+        }
+
+        &__toolbar-button{
+            
+        }
+
+        &__filter-button{
+            
+        }
+
+        &__delete-button{
+            
+        }
     }
+}
+.custom-popover .popover-content {
+    min-width: 320px;
 }

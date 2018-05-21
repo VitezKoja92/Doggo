@@ -7,8 +7,6 @@ import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/count';
 
 import { Doggo } from './../models/doggo';
-import { GenderEnum } from '../enums/genderEnum';
-import { Language } from './../models/language';
 
 @Injectable()
 export class DoggosEndpointService {
@@ -22,7 +20,7 @@ export class DoggosEndpointService {
        return this.httpClient.get<Doggo[]>(this.DOGGOS_JSON_STRING); 
     }; 
 
-    getDoggosByGender(gender: string): Observable<Doggo[]>{
+    getDoggosByGender(gender: string): Observable<Doggo[]> {
         return this.httpClient.get<Doggo[]>(`${this.DOGGOS_JSON_STRING}?generalInfo.gender=${gender}`);
     };
 

@@ -1,0 +1,79 @@
+page-my-doggos-filters {
+    .my-doggos-filters {
+
+        &__row {
+            display: flex;
+
+            .my-doggos-filters__row-option {
+                margin-right: 4rem;
+                align-items: center;
+                display: flex;
+            }
+            border-bottom: 1px dashed gray;
+        }
+
+        &__row-option {
+            ion-label {
+                font-size: $fs-16;
+            }  
+        }
+
+        &__item {
+            padding-left: 0 !important;
+            font-size: $fs-16;
+
+            .item-inner, .input-wrapper {
+                margin-right: 0;
+            }
+
+            ion-select {
+                max-width: 80%;
+                .select-text {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        &__age-label {
+            margin-bottom: 0;
+            font-size: $fs-16;
+        }
+
+        // FOOTER
+        &__footer-buttons {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            padding: 1rem 4rem;
+        }
+
+        &__submit-button {
+
+        }
+
+        &__dismiss-button {
+
+        }
+    }
+
+    // ADDITIONAL IOS AND MD STYLE
+    .radio-ios .radio-icon {
+        width: 18px !important;
+        position: unset !important;
+        border: 2px solid darkgray;
+        border-radius: 30%;
+    }
+
+    .item-ios.item-block .item-inner, 
+    .item-md.item-block .item-inner {
+        border: 0;
+    }
+
+
+    .range-ios, .range-md {
+        padding: 8px 8px;;
+        .range-pin {
+            padding: 0;
+        }
+    }
+}

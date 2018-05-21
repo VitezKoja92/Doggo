@@ -1,0 +1,81 @@
+<!-- *** CONTENT *** -->
+<ion-content padding>
+  <!--GENDER-->
+  <ion-row  radio-group 
+            class="my-doggos-filters__row"
+            [(ngModel)]="filterSettings.gender">
+    <div class="my-doggos-filters__row-option">
+      <ion-label>{{ 'MY_DOGGOS_FILTERS.FILTERS.GENDER.MALE' | translate }}</ion-label>
+      <ion-radio checked="filterSettings.gender==='male'" value="male"
+                 ngDefaultControl></ion-radio>
+    </div>
+    <div class="my-doggos-filters__row-option">
+      <ion-label>{{ 'MY_DOGGOS_FILTERS.FILTERS.GENDER.FEMALE' | translate }}</ion-label>
+      <ion-radio checked="filterSettings.gender==='female'" value="female"
+                 ngDefaultControl></ion-radio>
+    </div>
+  </ion-row>
+  <!--BREED-->   
+  <ion-row class="my-doggos-filters__row">
+    <ion-item class="my-doggos-filters__item">
+      <ion-label>{{ 'MY_DOGGOS_FILTERS.FILTERS.BREED.TITLE' | translate }}</ion-label>
+      <ion-select [(ngModel)]="filterSettings.breed" interface="popover">
+        <ion-option value="golden retriever">{{ 'MY_DOGGOS_FILTERS.FILTERS.BREED.GOLDEN_RETRIEVER' | translate }}</ion-option>
+        <ion-option value="french bulldog">{{ 'MY_DOGGOS_FILTERS.FILTERS.BREED.FRENCH_BULLDOG' | translate }}</ion-option>
+        <ion-option value="labrador">{{ 'MY_DOGGOS_FILTERS.FILTERS.BREED.LABRADOR' | translate }}</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-row>
+  <!--COLOR-->   
+  <ion-row  class="my-doggos-filters__row">
+    <ion-item class="my-doggos-filters__item">
+      <ion-label>{{ 'MY_DOGGOS_FILTERS.FILTERS.COLOR.TITLE' | translate }}</ion-label>
+      <ion-select [(ngModel)]="filterSettings.color" interface="popover">
+        <ion-option value="cream">{{ 'MY_DOGGOS_FILTERS.FILTERS.COLOR.CREAM' | translate }}</ion-option>
+        <ion-option value="brindle">{{ 'MY_DOGGOS_FILTERS.FILTERS.COLOR.BRINDLE' | translate }}</ion-option>
+        <ion-option value="chocolate">{{ 'MY_DOGGOS_FILTERS.FILTERS.COLOR.CHOCOLATE' | translate }}</ion-option>
+        <ion-option value="black">{{ 'MY_DOGGOS_FILTERS.FILTERS.COLOR.BLACK' | translate }}</ion-option>
+        <ion-option value="pied">{{ 'MY_DOGGOS_FILTERS.FILTERS.COLOR.PIED' | translate }}</ion-option>
+        <ion-option value="blue">{{ 'MY_DOGGOS_FILTERS.FILTERS.COLOR.BLUE' | translate }}</ion-option>
+        <ion-option value="gold">{{ 'MY_DOGGOS_FILTERS.FILTERS.COLOR.GOLD' | translate }}</ion-option>
+        <ion-option value="white">{{ 'MY_DOGGOS_FILTERS.FILTERS.COLOR.WHITE' | translate }}</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-row>
+  <!--AGE-->   
+  <ion-row class="my-doggos-filters__row">
+    <ion-label class="my-doggos-filters__age-label">{{ 'MY_DOGGOS_FILTERS.FILTERS.AGE.TITLE' | translate }}</ion-label>
+    <ion-item class="my-doggos-filters__item">
+      <ion-range dualKnobs="true" pin="true" min="0" max="20" color="primary"
+                 [(ngModel)]="age">
+        <ion-label range-left></ion-label>
+        <ion-label range-right></ion-label>
+      </ion-range>
+    </ion-item>
+  </ion-row> 
+</ion-content>
+
+<!-- *** FOOTER *** -->
+<ion-footer>
+  <ion-buttons class="my-doggos-filters__footer-buttons">
+    <!--Restart button-->
+    <button ion-button icon-only color="danger"
+            class="my-doggos-filters__dismiss-button"
+            (click)="onRestartFilter()">
+            <ion-icon name="refresh"></ion-icon>
+      <!-- {{ 'MY_DOGGOS_FILTERS.FOOTER.RESTART_BUTTON_LABEL' | translate }} -->
+    </button>
+    <!--Dismiss button-->
+    <button ion-button color="light"
+            class="my-doggos-filters__dismiss-button"
+            (click)="onDismissFilter()">
+      {{ 'MY_DOGGOS_FILTERS.FOOTER.DISMISS_BUTTON_LABEL' | translate }}
+    </button>
+    <!--Submit button-->
+    <button ion-button 
+            class="my-doggos-filters__submit-button"
+            (click)="onSumbitFilter()">
+      {{ 'MY_DOGGOS_FILTERS.FOOTER.SUBMIT_BUTTON_LABEL' | translate }}
+    </button>
+  </ion-buttons>
+</ion-footer>

@@ -3,6 +3,8 @@ export enum ColorEnum {
     Gold = "gold",
     Chocolate = "chocolate",
     Black = "black",
-    BlackWhite = "black and white",
-    Beige = "beige"
+    Pied = "pied",
+    Blue = "blue",
+    Brindle = "brindle",
+    Cream = "cream"
 }
